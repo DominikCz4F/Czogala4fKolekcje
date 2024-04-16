@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Czogala4fKolekcje.CollectionDetailsPage"
+             Title="Collection Details">
+
+    <StackLayout Padding="20">
+        <Label x:Name="CollectionNameLabel" Text="{Binding Name}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20" />
+
+        <Button Text="Usun kolekcje" Clicked="OnDeleteCollectionClicked" BackgroundColor="#3B322C" TextColor="White" Margin="0,0,0,10" FontSize="22"/>
+        <Button Text="Zmien nazwe kolekcji" Clicked="OnChangeCollectionNameClicked" BackgroundColor="#3B322C" TextColor="White" Margin="0,0,0,10" FontSize="22"/>
+        <Button Text="Dodaj nowy element" Clicked="OnAddNewItemClicked" BackgroundColor="#3B322C" TextColor="White" Margin="0,0,0,10" FontSize="22"/>
+
+        <ScrollView>
+            <StackLayout x:Name="ItemsStackLayout" BackgroundColor="#4E6151" Padding="10">
+                <StackLayout.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="FontSize" Value="22" />
+                        <Setter Property="Margin" Value="0,0,0,5" />
+                    </Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="BackgroundColor" Value="#5E8C61" />
+                        <Setter Property="WidthRequest" Value="100" />
+                        <Setter Property="Margin" Value="0,0,10,0" />
+                    </Style>
+                </StackLayout.Resources>
+            </StackLayout>
+        </ScrollView>
+
+        <Button Text="Powrot do strony glownej" Clicked="OnBackToMainPageClicked" BackgroundColor="#3B322C" TextColor="White" Margin="0,20,0,0" FontSize="22"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Czogala4fKolekcje.MainPage">
+
+    <StackLayout Padding="20">
+        <Button Text="Dodaj nowa kolekcje" Clicked="OnAddCollectionClicked" BackgroundColor="#3B322C" TextColor="White" Margin="0,0,0,20" FontSize="22"/>
+
+        <ListView x:Name="CollectionsListView" ItemSelected="OnCollectionSelected" BackgroundColor="#4E6151">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" BackgroundColor="#4E6151">
+                            <Label Text="{Binding Name}" FontSize="22" BackgroundColor="#5E8C61" TextColor="White"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
